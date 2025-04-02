@@ -6,12 +6,16 @@
         <Text text="Welcome To Learning Project Form" width="100%" textAlign="Center" class="sapUiSmallMargin" ></Text>
        <Label text="Name" class="sapUiSmallMargin" required="true" design="Standard"></Label>
        <Input value="{/name}" width="70%" class="sapUiSmallMargin"></Input>
+       
+       <VBox class="sapUiSmallMargin">
+        <Button text="Click here to show/hide image" press="onClick" />
+        <Image id="hiddenImage"
+            src="https://cloudfront-us-east-1.images.arcpublishing.com/leadersgroup/HNVJO4MINV2MWFGGD3LHF2RNTE.png"
+            height="100px" class="sapUiSmallMargin"
+            visible="false" />
+    </VBox>
+    
       </content>
-      
-
-
-
-
 
 
       <footer>

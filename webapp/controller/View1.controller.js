@@ -7,7 +7,13 @@ sap.ui.define([
         onNavigateToSecondPage: function () {
             sap.m.MessageToast.show("Navigating to the Second page...");
             this.getOwnerComponent().getRouter().navTo("RouteView2");
+        },
+        onClick: function () {
+            var oImage = this.getView().byId("hiddenImage");
+            var isVisible = oImage.getVisible();
+            oImage.setVisible(!isVisible); 
         }
+        
 
     });
 });
