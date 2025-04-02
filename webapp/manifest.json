@@ -1,0 +1,117 @@
+{
+    "_version": "1.65.0",
+    "sap.app": {
+        "id": "learning.learningproject",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.16.4",
+            "toolsId": "57908fa8-12c0-4a7f-a438-33ba2d7ff526"
+        }
+    },
+
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.134.1",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "learning.learningproject.i18n.i18n"
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "transition": "slide",
+                "type": "View",
+                "viewType": "XML",
+                "path": "learning.learningproject.view",
+                "async": true,
+                "viewPath": "learning.learningproject.view",
+                "bypassed": {
+                    "target": "notFound"
+                }
+            },
+            "routes": [
+                {
+                    "name": "RouteView1",
+                    "pattern": ":?query:",
+                    "target": ["TargetView1"]
+                },
+                {
+                    "name": "RouteView2",
+                    "pattern": "second",
+                    "target": ["TargetView2"]
+                }
+            ],
+            "targets": {
+                "TargetView1": {
+                    "id": "View1",
+                    "viewName": "View1",
+                    "viewType": "XML"
+                },
+                "TargetView2": {
+                    "id": "View2",
+                    "viewName": "second",
+                    "viewType": "XML"
+                },
+                "notFound": {
+                    "viewName": "NotFound",
+                    "viewType": "XML",
+                    "transition": "show",
+                    "viewId": "notFound"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "learning.learningproject.view.App",
+            "type": "XML",
+            "id": "App"
+        }
+    }
+}

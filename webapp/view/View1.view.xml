@@ -1,0 +1,28 @@
+<mvc:View controllerName="learning.learningproject.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="Learning Demo" class="sapUiResponsiveContentPadding">
+      <content>
+        <Text text="Welcome To Learning Project Form" width="100%" textAlign="Center" class="sapUiSmallMargin" ></Text>
+       <Label text="Name" class="sapUiSmallMargin" required="true" design="Standard"></Label>
+       <Input value="{/name}" width="70%" class="sapUiSmallMargin"></Input>
+      </content>
+      
+
+
+
+
+
+
+      <footer>
+      <Bar>
+       <contentLeft>
+          <Button text="Submit" press="onSubmit"/>
+        </contentLeft> 
+        <contentRight>
+          <Button text="Next Page" press="onNavigateToSecondPage"/>
+        </contentRight>
+      </Bar>
+      </footer>
+    </Page>
+</mvc:View>
