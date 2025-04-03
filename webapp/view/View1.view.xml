@@ -11,9 +11,9 @@
       width="100%" 
       textAlign="Center" 
       text="Default Title"
-      style="font-size: 2rem;" />
+      style="font-size: 20px;" />
         </VBox>
-        
+
        <Label text="Name" class="sapUiSmallMargin" required="true" design="Standard"></Label>
        <Input value="{/name}" width="80%" class="sapUiSmallMargin" id="name"></Input>
 

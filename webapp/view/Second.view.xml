@@ -3,7 +3,7 @@
     xmlns="sap.m">
     <Page id="second" title="Second View" class="sapUiResponsiveContentPadding">
       <content>
-        
+
       </content>
       <footer>
       <Bar>
