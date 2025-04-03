@@ -12,7 +12,16 @@ sap.ui.define([
             var oImage = this.getView().byId("hiddenImage");
             var isVisible = oImage.getVisible();
             oImage.setVisible(!isVisible); 
+        }, 
+        onChangeTitle: function () {
+            var oInput = this.getView().byId("name"); 
+            var sValue = oInput.getValue(); 
+        
+            var oText = this.getView().byId("text"); 
+            sap.m.MessageToast.show("Title changed to: " + sValue);
+            oText.setText(sValue); 
         }
+        
         
 
     });
