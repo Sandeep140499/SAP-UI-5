@@ -1,19 +1,62 @@
 <mvc:View controllerName="learning.learningproject.controller.Second"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="second" title="Second View" class="sapUiResponsiveContentPadding">
-      <content>
+    xmlns="sap.m"
+    height="100%"
+    displayBlock="true">
 
-      </content>
-      <footer>
-      <Bar>
-        <contentLeft>
-          <Button text="Previous Page" press="onNavigateToFirstPage"/>
-        </contentLeft> 
-        <contentRight>
-          <Button text="Next Page" press="onNavigateToSecondPage"/>
-        </contentRight>
-      </Bar>
-      </footer>
+    <Page id="second" title="Second View" class="sapUiResponsiveContentPadding">
+        <content>
+            <Table
+                id="table"
+                headerText="Mountains"
+                items="{
+                    path: '/mountains'
+                }">
+                <columns>
+                    <Column>
+                        <Text text="Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Height"/>
+                    </Column>
+                    <Column>
+                        <Text text="Range"/>
+                    </Column>
+                    <Column>
+                        <Text text="First Ascent"/>
+                    </Column>
+                    <Column>
+                        <Text text="Countries"/>
+                    </Column>
+                    <Column>
+                        <Text text="Parent Mountain"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{name}"/>
+                            <Text text="{height}"/>
+                            <Text text="{range}"/>
+                            <Text text="{first_ascent}"/>
+                            <Text text="{countries}"/>
+                            <Text text="{parent_mountain}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+
+        <footer>
+            <Bar>
+                <contentLeft>
+                    <Button text="Previous Page" press="onNavigateToFirstPage"/>
+                </contentLeft>
+                <contentRight>
+                    <Button text="Next Page" press="onNavigateToSecondPage"/>
+                </contentRight>
+            </Bar>
+        </footer>
     </Page>
+
 </mvc:View>

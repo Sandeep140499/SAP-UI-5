@@ -60,7 +60,10 @@
                 {
                     "uri": "css/style.css"
                 }
-            ]
+            ],
+            "configuration": {
+                "fioriSandboxConfig": "appconfig/fioriSandboxConfig.json"
+            }
         },
         "routing": {
             "config": {

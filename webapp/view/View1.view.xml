@@ -6,12 +6,13 @@
         <Text text="Welcome To Learning Project Form" width="100%" textAlign="Center" class="sapUiSmallMargin" ></Text>
        
         <VBox>
-          <Text class="sapUiSmallMargin" 
+          <Text 
+          class="sapUiSmallMargin myCustomFontSize" 
       id="text" 
       width="100%" 
       textAlign="Center" 
       text="Default Title"
-      style="font-size: 20px;" />
+       />
         </VBox>
 
        <Label text="Name" class="sapUiSmallMargin" required="true" design="Standard"></Label>

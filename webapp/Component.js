@@ -1,3 +1,5 @@
+
+
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "learning/learningproject/model/models"
@@ -13,13 +15,13 @@ sap.ui.define([
         },
 
         init() {
-            // call the base component's init function
+            // 🔹 Call the base component's init function
             UIComponent.prototype.init.apply(this, arguments);
 
-            // set the device model
+            // 🔹 Set the device model for responsiveness
             this.setModel(models.createDeviceModel(), "device");
 
-            // enable routing
+            // 🔹 Enable routing
             this.getRouter().initialize();
         }
     });

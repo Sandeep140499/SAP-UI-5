@@ -1,0 +1,84 @@
+{
+	"mountains": [
+		{
+			"name": "Mount Everest",
+			"height": 8848,
+			"range": "Mahalangur Himalaya",
+			"first_ascent": 1953,
+			"countries": "Nepal, China",
+			"parent_mountain": "-"
+		},
+		{
+			"name": "K2",
+			"height": 8611,
+			"range": "Baltoro Karakoram",
+			"first_ascent": 1954,
+			"countries": "Pakistan, China",
+			"parent_mountain": "Mount Everest"
+		},
+		{
+			"name": "Kangchenjunga",
+			"height": 8586,
+			"range": "Kangchenjunga Himalaya",
+			"first_ascent": 1955,
+			"countries": "Nepal, India",
+			"parent_mountain": "Mount Everest"
+		},
+		{
+			"name": "Lhotse",
+			"height": 8516,
+			"range": "Mahalangur Himalaya",
+			"first_ascent": 1956,
+			"countries": "Nepal, China",
+			"parent_mountain": "Mount Everest"
+		},
+		{
+			"name": "Makalu",
+			"height": 8485,
+			"range": "Mahalangur Himalaya",
+			"first_ascent": 1955,
+			"countries": "Nepal, China",
+			"parent_mountain": "Mount Everest"
+		},
+		{
+			"name": "Cho Oyu",
+			"height": 8188,
+			"range": "Mahalangur Himalaya",
+			"first_ascent": 1954,
+			"countries": "Nepal, China",
+			"parent_mountain": "Mount Everest"
+		},
+		{
+			"name": "Dhaulagiri I",
+			"height": 8167,
+			"range": "Dhaulagiri Himalaya",
+			"first_ascent": 1960,
+			"countries": "Nepal",
+			"parent_mountain": "K2"
+		},
+		{
+			"name": "Manaslu",
+			"height": 8163,
+			"range": "Manaslu Himalaya",
+			"first_ascent": 1956,
+			"countries": "Nepal",
+			"parent_mountain": "Cho Oyu"
+		},
+		{
+			"name": "Nanga Parbat",
+			"height": 8126,
+			"range": "Nanga Parbat Himalaya",
+			"first_ascent": 1953,
+			"countries": "Pakistan",
+			"parent_mountain": "Dhaulagiri"
+		},
+		{
+			"name": "Annapurna I",
+			"height": 8091,
+			"range": "Annapurna Himalaya",
+			"first_ascent": 1950,
+			"countries": "Nepal",
+			"parent_mountain": "Cho Oyu"
+		}
+	]
+}
