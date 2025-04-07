@@ -1,42 +1,48 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
-    "sap/m/MessageToast"
-], function(Controller, JSONModel, MessageToast) {
+    "sap/m/MessageToast",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator"
+], function(Controller, JSONModel, MessageToast, Filter, FilterOperator) {
     "use strict";
 
     return Controller.extend("learning.learningproject.controller.Second", {
         
         onInit: function() {
-            // Create JSON model with mountain data
-            // var oMountainData = {
-            //     mountains: [
-            //         { name: "Everest", height: 8848, range: "Himalayas", first_ascent: "1953", countries: "Nepal/China", parent_mountain: "None" },
-            //         { name: "K2", height: 8611, range: "Karakoram", first_ascent: "1954", countries: "Pakistan/China", parent_mountain: "None" },
-            //         { name: "Kangchenjunga", height: 8586, range: "Himalayas", first_ascent: "1955", countries: "Nepal/India", parent_mountain: "None" }
-            //     ]
-            // };
-
-            // // Set the model to the view
-            // var oModel = new JSONModel(oMountainData);
-            // this.getView().setModel(oModel, "mountainModel");
-
             var oModel = new JSONModel(
                 sap.ui.require.toUrl("learning/learningproject/model/mountains.json")
-              );
-              this.getView().setModel(oModel);
+            );
+            this.getView().setModel(oModel);
+        },
 
-       
+        onFilterSearch: function(oEvent) {
+            var oTable = this.getView().byId("table");
+            var oBinding = oTable.getBinding("items");
+            var aFilters = [];
+            var sName = this.getView().byId("filterName").getValue();
+            
+            if (sName) {
+                aFilters.push(new Filter("name", FilterOperator.Contains, sName));
+            }
 
+            var sCountries = this.getView().byId("filterCountries").getValue();
+            if (sCountries) {
+                aFilters.push(new Filter("countries", FilterOperator.Contains, sCountries));
+            }
+
+            oBinding.filter(aFilters);
         },
 
         onNavigateToFirstPage: function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.navTo("firstPage");
+            sap.m.MessageToast.show("Navigating to the First page...");
+            oRouter.navTo("RouteView1");
         },
 
         onNavigateToSecondPage: function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            sap.m.MessageToast.show("Navigating to the Second page...");
             oRouter.navTo("secondPage");
         }
         
