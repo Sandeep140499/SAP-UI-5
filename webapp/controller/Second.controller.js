@@ -4,6 +4,7 @@ sap.ui.define([
     "sap/m/MessageToast",
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator"
+    
 ], function(Controller, JSONModel, MessageToast, Filter, FilterOperator) {
     "use strict";
 
@@ -21,7 +22,7 @@ sap.ui.define([
             var oBinding = oTable.getBinding("items");
             var aFilters = [];
             var sName = this.getView().byId("filterName").getValue();
-            
+
             if (sName) {
                 aFilters.push(new Filter("name", FilterOperator.Contains, sName));
             }
@@ -40,10 +41,10 @@ sap.ui.define([
             oRouter.navTo("RouteView1");
         },
 
-        onNavigateToSecondPage: function () {
+        onNavigateToThirdPage: function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            sap.m.MessageToast.show("Navigating to the Second page...");
-            oRouter.navTo("secondPage");
+            sap.m.MessageToast.show("Navigating to the third page...");
+            oRouter.navTo("RouteView3");
         }
         
     });

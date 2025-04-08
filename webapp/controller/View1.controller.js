@@ -9,15 +9,15 @@ sap.ui.define([
             this.getOwnerComponent().getRouter().navTo("RouteView2");
         },
         onClick: function () {
-            var oImage = this.getView().byId("hiddenImage");
-            var isVisible = oImage.getVisible();
+            let oImage = this.getView().byId("hiddenImage");
+            let isVisible = oImage.getVisible();
             oImage.setVisible(!isVisible); 
         }, 
         onChangeTitle: function () {
-            var oInput = this.getView().byId("name"); 
-            var sValue = oInput.getValue(); 
+            let oInput = this.getView().byId("name"); 
+            let sValue = oInput.getValue(); 
         
-            var oText = this.getView().byId("text"); 
+            let oText = this.getView().byId("text"); 
             sap.m.MessageToast.show("Title changed to: " + sValue);
             oText.setText(sValue); 
         }

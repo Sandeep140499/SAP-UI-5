@@ -20,7 +20,7 @@
                     </filterbar:FilterItem>
                 </filterbar:filterItems>
             </filterbar:FilterBar>
-            
+
             <Table 
                 id="table" 
                 items="{
@@ -76,7 +76,7 @@
                     <Button id="previousPage" text="Previous Page" press="onNavigateToFirstPage"/>
                 </contentLeft>
                 <contentRight>
-                    <Button id="nextPage" text="Next Page" press="onNavigateToSecondPage"/>
+                    <Button id="nextPage" text="Next Page" press="onNavigateToThirdPage"/>
                 </contentRight>
             </Bar>
         </footer>

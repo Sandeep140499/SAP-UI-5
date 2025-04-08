@@ -7,9 +7,5 @@ sap.ui.define([
       onInit() {
       },
 
-      onNavigateToSecondPage() {
-          const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-          oRouter.navTo("RouteView2");
-      }
   });
 });
