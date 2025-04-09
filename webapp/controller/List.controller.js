@@ -15,7 +15,7 @@ sap.ui.define([
             this.getView().setModel(oModel);
         },
 
-        // Called when an item in the list is clicked
+        
         handleNavigateToSidePanel: function (oEvent) {
             var oListItem = oEvent.getParameter("listItem") || oEvent.getParameter("item");
             var oContext = oListItem.getBindingContext();

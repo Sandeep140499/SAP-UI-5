@@ -19,7 +19,7 @@
                 type="Active" />
         </List>
         
-        <footer>
+        <!-- <footer>
             <Bar id="footer" class="paddingBottom">
                 <contentLeft>
                     <Button id="previousPage" text="Previous Page" press="onNavigateToSecondPage" />
@@ -28,6 +28,9 @@
                     <Button id="nextPage" text="Next Page" press="onNavigateToFourthPage" />
                 </contentRight>
             </Bar>
+        </footer> -->
+        <footer>
+            <Bar></Bar>
         </footer>
         
     </Page>
