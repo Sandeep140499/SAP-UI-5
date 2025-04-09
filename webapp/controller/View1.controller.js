@@ -22,7 +22,5 @@ sap.ui.define([
             oText.setText(sValue); 
         }
         
-        
-
     });
 });
