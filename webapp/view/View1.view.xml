@@ -1,46 +1,82 @@
-<mvc:View controllerName="learning.learningproject.controller.View1"
+<mvc:View
+    controllerName="learning.learningproject.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="Learning Demo" class="sapUiResponsiveContentPadding">
-      <content>
-        <Text text="Welcome To Learning Project Form" width="100%" textAlign="Center" class="sapUiSmallMargin" ></Text>
-       
-        <VBox>
-          <Text 
-          class="sapUiSmallMargin myCustomFontSize" 
-      id="text" 
-      width="100%" 
-      textAlign="Center" 
-      text="Default Title"
-       />
-        </VBox>
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="Learning Demo"
+        class="sapUiResponsiveContentPadding"
+    >
+        <content>
+            <Text id="welcomeText"
+                text="Welcome To Learning Project Form"
+                width="100%"
+                textAlign="Center"
+                class="sapUiSmallMargin"
+            />
 
-       <Label text="Name" class="sapUiSmallMargin" required="true" design="Standard"></Label>
-       <Input value="{/name}" width="80%" class="sapUiSmallMargin" id="name"></Input>
+            <VBox >
+                <Text
+                    class="sapUiSmallMargin myCustomFontSize"
+                    id="text"
+                    width="100%"
+                    textAlign="Center"
+                    text="Default Title"
+                />
+            </VBox>
 
-       <!-- <VBox class="sapUiSmallMargin"> -->
-        <Button text="change title" press="onChangeTitle" class="sapUiSmallMargin"/>
-       <!-- </VBox> -->
-       
-       <VBox class="sapUiSmallMargin">
-        <Button text="Click here to show/hide image" press="onClick" />
-        <Image id="hiddenImage"
-            src="https://cloudfront-us-east-1.images.arcpublishing.com/leadersgroup/HNVJO4MINV2MWFGGD3LHF2RNTE.png"
-            height="100px" class="sapUiSmallMargin"
-            visible="false" />
-    </VBox>
-    
-      </content>
+            <Label
+                text="Name"
+                class="sapUiSmallMargin"
+                required="true"
+                design="Standard"
+            />
+            <Input
+                value="{/name}"
+                width="80%"
+                class="sapUiSmallMargin"
+                id="name"
+            />
 
-      <footer>
-      <Bar>
-       <contentLeft>
-          <Button text="Submit" press="onSubmit"/>
-        </contentLeft> 
-        <contentRight>
-          <Button text="Next Page" press="onNavigateToSecondPage"/>
-        </contentRight>
-      </Bar>
-      </footer>
+            <!-- <VBox class="sapUiSmallMargin"> -->
+            <Button id="changeTitleButton"
+                text="change title"
+                press="onChangeTitle"
+                class="sapUiSmallMargin"
+            />
+            <!-- </VBox> -->
+
+            <VBox class="sapUiSmallMargin">
+                <Button id="showHideImage"
+                    text="Click here to show/hide image"
+                    press="onClick"
+                />
+                <Image 
+                    id="hiddenImage"
+                    src="https://cloudfront-us-east-1.images.arcpublishing.com/leadersgroup/HNVJO4MINV2MWFGGD3LHF2RNTE.png"
+                    height="100px"
+                    class="sapUiSmallMargin"
+                    visible="false"
+                />
+            </VBox>
+        </content>
+
+        <footer>
+            <Bar>
+                <contentLeft>
+                    <Button id="submitButton"
+                        text="Submit"
+                        press="onSubmit"
+                    />
+                </contentLeft>
+                <contentRight>
+                    <Button id="nextPageButton"
+                        text="Next Page"
+                        press="onNavigateToSecondPage"
+                    />
+                </contentRight>
+            </Bar>
+        </footer>
     </Page>
 </mvc:View>

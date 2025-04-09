@@ -1,69 +1,138 @@
-<mvc:View xmlns:filterbar="sap.ui.comp.filterbar" controllerName="learning.learningproject.controller.Second"
+<mvc:View
+    xmlns:filterbar="sap.ui.comp.filterbar"
+    controllerName="learning.learningproject.controller.Second"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     height="100%"
-    displayBlock="true">
-
-    <Page id="second" title="Second View" class="sapUiResponsiveContentPadding">
+    displayBlock="true"
+>
+    <Page
+        id="second"
+        title="Second View"
+        class="sapUiResponsiveContentPadding"
+    >
         <content>
-            <filterbar:FilterBar id="filterBar" search="onFilterSearch">
+            <filterbar:FilterBar
+                id="filterBar"
+                search="onFilterSearch"
+            >
                 <filterbar:filterItems>
-                    <filterbar:FilterItem name="name" label="Name">
+                    <filterbar:FilterItem
+                        name="name"
+                        label="Name"
+                    >
                         <filterbar:control>
-                            <Input id="filterName" value="{filters>/name}" />
+                            <Input
+                                id="filterName"
+                                value="{filters>/name}"
+                            />
                         </filterbar:control>
                     </filterbar:FilterItem>
-                    <filterbar:FilterItem name="Countries" label="Countries">
+                    <filterbar:FilterItem
+                        name="Countries"
+                        label="Countries"
+                    >
                         <filterbar:control>
-                            <Input id="filterCountries" value="{filters>/Countries}" />
+                            <Input
+                                id="filterCountries"
+                                value="{filters>/Countries}"
+                            />
                         </filterbar:control>
                     </filterbar:FilterItem>
                 </filterbar:filterItems>
             </filterbar:FilterBar>
 
-            <Table 
-                id="table" 
+            <Table
+                id="table"
                 items="{
                     path: '/mountains'
-                }">
+                }"
+            >
                 <headerToolbar>
                     <Toolbar id="headerToolbar">
-                        <HBox id ="headerHBox" justifyContent="Center" width="100%" alignItems="Center">
-                            <Title id="headerTitle" text="Mountains" titleStyle="H1"  />
+                        <HBox
+                            id="headerHBox"
+                            justifyContent="Center"
+                            width="100%"
+                            alignItems="Center"
+                        >
+                            <Title
+                                id="headerTitle"
+                                text="Mountains"
+                                titleStyle="H1"
+                            />
                         </HBox>
-                    
                     </Toolbar>
-                    
                 </headerToolbar>
-                <columns id="columns"  width="100%" alignItems="Center">    
+                <columns
+                    id="columns"
+                    width="100%"
+                    alignItems="Center"
+                >
                     <Column id="columnName">
-                        <Text id="textColumnName" text="Name"/>
+                        <Text
+                            id="textColumnName"
+                            text="Name"
+                        />
                     </Column>
                     <Column id="columnHeight">
-                        <Text id="textColumnHeight" text="Height"/>
+                        <Text
+                            id="textColumnHeight"
+                            text="Height"
+                        />
                     </Column>
                     <Column id="columnRange">
-                        <Text id="textColumnRange" text="Range"/>
+                        <Text
+                            id="textColumnRange"
+                            text="Range"
+                        />
                     </Column>
                     <Column id="columnFirstAscent">
-                        <Text id="textColumnFirstAscent" text="First Ascent"/>
+                        <Text
+                            id="textColumnFirstAscent"
+                            text="First Ascent"
+                        />
                     </Column>
                     <Column id="columnCountries">
-                        <Text id="textColumnCountries" text="Countries"/>
+                        <Text
+                            id="textColumnCountries"
+                            text="Countries"
+                        />
                     </Column>
                     <Column id="columnParentMountain">
-                        <Text id="textColumnParentMountain" text="Parent Mountain"/>
+                        <Text
+                            id="textColumnParentMountain"
+                            text="Parent Mountain"
+                        />
                     </Column>
                 </columns>
                 <items>
                     <ColumnListItem id="columnListItem">
                         <cells>
-                            <Text id="textCellName" text="{name}"/>
-                            <Text id="textCellHeight" text="{height}"/>
-                            <Text id="textCellRange" text="{range}"/>
-                            <Text id="textCellFirstAscent" text="{first_ascent}"/>
-                            <Text id="textCellCountries" text="{countries}"/>
-                            <Text id="textCellParentMountain" text="{parent_mountain}"/>
+                            <Text
+                                id="textCellName"
+                                text="{name}"
+                            />
+                            <Text
+                                id="textCellHeight"
+                                text="{height}"
+                            />
+                            <Text
+                                id="textCellRange"
+                                text="{range}"
+                            />
+                            <Text
+                                id="textCellFirstAscent"
+                                text="{first_ascent}"
+                            />
+                            <Text
+                                id="textCellCountries"
+                                text="{countries}"
+                            />
+                            <Text
+                                id="textCellParentMountain"
+                                text="{parent_mountain}"
+                            />
                         </cells>
                     </ColumnListItem>
                 </items>
@@ -71,15 +140,25 @@
         </content>
 
         <footer>
-            <Bar id="footer" class="paddingBottom">
+            <Bar
+                id="footer"
+                class="paddingBottom"
+            >
                 <contentLeft>
-                    <Button id="previousPage" text="Previous Page" press="onNavigateToFirstPage"/>
+                    <Button
+                        id="previousPage"
+                        text="Previous Page"
+                        press="onNavigateToFirstPage"
+                    />
                 </contentLeft>
                 <contentRight>
-                    <Button id="nextPage" text="Next Page" press="onNavigateToThirdPage"/>
+                    <Button
+                        id="nextPage"
+                        text="Next Page"
+                        press="onNavigateToThirdPage"
+                    />
                 </contentRight>
             </Bar>
         </footer>
     </Page>
-
 </mvc:View>

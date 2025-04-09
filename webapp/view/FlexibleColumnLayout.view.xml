@@ -1,15 +1,30 @@
-<mvc:View xmlns="sap.f" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" controllerName="learning.learningproject.controller.FlexibleColumnLayout" height="100%">
-	<FlexibleColumnLayout id="fcl">
-		<landmarkInfo>
-			<FlexibleColumnLayoutAccessibleLandmarkInfo
-				firstColumnLabel="Custom Label For First Column"
-				lastColumnLabel="Test Label for Last Column"/>
-		</landmarkInfo>
-		<beginColumnPages>
-			<mvc:XMLView id="beginView" async="true" viewName="learning.learningproject.view.List"/>
-		</beginColumnPages>
-		<midColumnPages>
-			<mvc:XMLView id="midView" async="true" viewName="learning.learningproject.view.Detail"/>
-		</midColumnPages>
-	</FlexibleColumnLayout>
+<mvc:View
+    xmlns="sap.f"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    controllerName="learning.learningproject.controller.FlexibleColumnLayout"
+    height="100%"
+>
+    <FlexibleColumnLayout id="fcl">
+        <landmarkInfo>
+            <FlexibleColumnLayoutAccessibleLandmarkInfo
+                firstColumnLabel="Custom Label For First Column"
+                lastColumnLabel="Test Label for Last Column"
+            />
+        </landmarkInfo>
+        <beginColumnPages>
+            <mvc:XMLView
+                id="beginView"
+                async="true"
+                viewName="learning.learningproject.view.List"
+            />
+        </beginColumnPages>
+        <midColumnPages>
+            <mvc:XMLView
+                id="midView"
+                async="true"
+                viewName="learning.learningproject.view.Detail"
+            />
+        </midColumnPages>
+    </FlexibleColumnLayout>
 </mvc:View>

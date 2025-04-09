@@ -3,22 +3,26 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     controllerName="learning.learningproject.controller.List"
-    height="100%">
-    
-    <Page id="listPage" title="Product Categories">
+    height="100%"
+>
+    <Page
+        id="listPage"
+        title="Product Categories"
+    >
         <List
             id="categoryList"
             items="{/}"
             mode="SingleSelectMaster"
             noDataText="No categories available"
-            itemPress="handleNavigateToSidePanel">
-            
+            itemPress="handleNavigateToSidePanel"
+        >
             <StandardListItem
                 title="{CategoryName}"
                 description="{NumberOfProducts} Products"
-                type="Active" />
+                type="Active"
+            />
         </List>
-        
+
         <!-- <footer>
             <Bar id="footer" class="paddingBottom">
                 <contentLeft>
@@ -30,8 +34,7 @@
             </Bar>
         </footer> -->
         <footer>
-            <Bar></Bar>
+            <Bar />
         </footer>
-        
     </Page>
 </mvc:View>
