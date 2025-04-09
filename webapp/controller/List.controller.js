@@ -8,6 +8,9 @@ sap.ui.define([
 	return Controller.extend("learning.learningproject.controller.List", {
 		
 		onInit: function() {
+			 // Initialize the event bus
+			this.bus = this.getOwnerComponent().getEventBus();
+
 			// Load JSON data from the correct path and set it to the view
 			var oModel = new JSONModel(
 				sap.ui.require.toUrl("learning/learningproject/localService/mockdata/ProductCategories.json")
@@ -15,9 +18,12 @@ sap.ui.define([
 			this.getView().setModel(oModel);
 		},
 
-		
 		handleNavigateToMidColumnPress: function () {
-			this.bus.publish("flexible", "setDetailPage");
+			// Publish the event to navigate to the middle column
+			this.bus.publish("flexible", "setDetailPage", {
+				message: "Navigate to middle column triggered"
+			});
+			MessageToast.show("Navigating to the middle column...");
 		},
 
 		onNavigateToSecondPage: function () {
